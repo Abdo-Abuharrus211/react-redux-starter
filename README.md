@@ -3,9 +3,13 @@ I made this template starter to practice rapid interview-style React development
 I've set up a Redux store in `src/store`, wrapped the `App` component with the `Provider`, and passed the store as a prop.
 Use `src/utils/` for all your utility modules.
 ## Getting Started
-1. Define your Redux Slices per feature or state-domain.
-2. Create your React components and connect them to the Redux store using hooks like `useSelector` and `useDispatch`.
-3. Use `src/utils/api/` for all your API utilities if you need custom functions, otherwise just use Tanstack Query and the `useQuery` hook.
+1. Instantiate a TQ client in your `App` or `main.tsx` and wrap it with `QueryClientProvider`.
+2. Define your Redux Slices per feature or state-domain.
+3. Create your React components and connect them to the Redux store using hooks like `useSelector` and `useDispatch`.
+4. Use `src/utils/api/` for all your API utilities if you need custom functions, otherwise just use Tanstack Query and the `useQuery` hook.
+
+> ℹ️Remember that Redux is for client-side state, not fetched data; that's what TQ is for! 
+
 
 ### Redux
 I'm using Redux to promote Single-Source-Of-Truth and be able to maintain global state throughout the app.
